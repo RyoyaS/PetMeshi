@@ -15,6 +15,7 @@
 		26312FBD27CCF4BD00D9D5F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26312FBB27CCF4BD00D9D5F0 /* LaunchScreen.storyboard */; };
 		26312FC727CCFF0800D9D5F0 /* StoreSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26312FC627CCFF0800D9D5F0 /* StoreSearchManager.swift */; };
 		26B2D21927CD1507000AE8D5 /* NotFoundStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D21827CD1507000AE8D5 /* NotFoundStoreViewController.swift */; };
+		26B2D22327CE6827000AE8D5 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D22227CE6827000AE8D5 /* StoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		26312FBE27CCF4BD00D9D5F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26312FC627CCFF0800D9D5F0 /* StoreSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchManager.swift; sourceTree = "<group>"; };
 		26B2D21827CD1507000AE8D5 /* NotFoundStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundStoreViewController.swift; sourceTree = "<group>"; };
+		26B2D22227CE6827000AE8D5 /* StoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				26312FC627CCFF0800D9D5F0 /* StoreSearchManager.swift */,
+				26B2D22227CE6827000AE8D5 /* StoreData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				26312FB527CCF4BB00D9D5F0 /* SearchViewController.swift in Sources */,
 				26312FC727CCFF0800D9D5F0 /* StoreSearchManager.swift in Sources */,
 				26B2D21927CD1507000AE8D5 /* NotFoundStoreViewController.swift in Sources */,
+				26B2D22327CE6827000AE8D5 /* StoreData.swift in Sources */,
 				26312FB127CCF4BB00D9D5F0 /* AppDelegate.swift in Sources */,
 				26312FB327CCF4BB00D9D5F0 /* SceneDelegate.swift in Sources */,
 			);

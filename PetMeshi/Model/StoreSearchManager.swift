@@ -26,7 +26,16 @@ struct StoreSerchManager {
             //URLSessionを作成
             let session = URLSession(configuration: .default)
             //sessionにタスクを与える
-            let task = session.dataTask(with: url, completionHandler: handle(data:response:error:))
+            let task = session.dataTask(with: url, completionHandler: {data,response,error in
+                if error != nil{
+                    print(error!)
+                    return
+                }
+                
+                if let safeData = data{
+                    parseJson(storeData: safeData)
+                }
+            })
             //タスクをスタートする
             task.resume()
         }
@@ -34,15 +43,18 @@ struct StoreSerchManager {
         
     }
     
-    func handle(data : Data?, response : URLResponse?, error : Error?) -> Void {
-        if error != nil{
-            print(error!)
-            return
+    func parseJson(storeData : Data)  {
+        do{
+            let decoder = JSONDecoder()
+            
+            let decodedData = try decoder.decode(StoreData.self, from: storeData)
+            
+            print(decodedData.results.shop[0].name)
+            
+        }catch{
+            print(error)
         }
         
-        if let safeData = data{
-            let dataString = String(data: safeData, encoding: .utf8)
-            print(dataString!)
-        }
     }
+    
 }
