@@ -16,6 +16,9 @@
 		26312FC727CCFF0800D9D5F0 /* StoreSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26312FC627CCFF0800D9D5F0 /* StoreSearchManager.swift */; };
 		26B2D21927CD1507000AE8D5 /* NotFoundStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D21827CD1507000AE8D5 /* NotFoundStoreViewController.swift */; };
 		26B2D22327CE6827000AE8D5 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D22227CE6827000AE8D5 /* StoreData.swift */; };
+		26B2D22527CEE8F4000AE8D5 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D22427CEE8F4000AE8D5 /* StoreModel.swift */; };
+		26B2D22727CF9C90000AE8D5 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D22627CF9C90000AE8D5 /* ShopListViewController.swift */; };
+		26B2D22927D4DF63000AE8D5 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D22827D4DF63000AE8D5 /* ShopDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		26312FC627CCFF0800D9D5F0 /* StoreSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchManager.swift; sourceTree = "<group>"; };
 		26B2D21827CD1507000AE8D5 /* NotFoundStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundStoreViewController.swift; sourceTree = "<group>"; };
 		26B2D22227CE6827000AE8D5 /* StoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
+		26B2D22427CEE8F4000AE8D5 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		26B2D22627CF9C90000AE8D5 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
+		26B2D22827D4DF63000AE8D5 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,8 @@
 			children = (
 				26312FB427CCF4BB00D9D5F0 /* SearchViewController.swift */,
 				26B2D21827CD1507000AE8D5 /* NotFoundStoreViewController.swift */,
+				26B2D22627CF9C90000AE8D5 /* ShopListViewController.swift */,
+				26B2D22827D4DF63000AE8D5 /* ShopDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -96,6 +104,7 @@
 			children = (
 				26312FC627CCFF0800D9D5F0 /* StoreSearchManager.swift */,
 				26B2D22227CE6827000AE8D5 /* StoreData.swift */,
+				26B2D22427CEE8F4000AE8D5 /* StoreModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,8 +182,11 @@
 			files = (
 				26312FB527CCF4BB00D9D5F0 /* SearchViewController.swift in Sources */,
 				26312FC727CCFF0800D9D5F0 /* StoreSearchManager.swift in Sources */,
+				26B2D22927D4DF63000AE8D5 /* ShopDetailViewController.swift in Sources */,
 				26B2D21927CD1507000AE8D5 /* NotFoundStoreViewController.swift in Sources */,
+				26B2D22727CF9C90000AE8D5 /* ShopListViewController.swift in Sources */,
 				26B2D22327CE6827000AE8D5 /* StoreData.swift in Sources */,
+				26B2D22527CEE8F4000AE8D5 /* StoreModel.swift in Sources */,
 				26312FB127CCF4BB00D9D5F0 /* AppDelegate.swift in Sources */,
 				26312FB327CCF4BB00D9D5F0 /* SceneDelegate.swift in Sources */,
 			);

@@ -8,14 +8,14 @@
 import UIKit
 import CoreLocation
 
-class SearchViewController: UIViewController, CLLocationManagerDelegate {
-    
+class SearchViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     var Latitude: CLLocationDegrees?
     var Longitude: CLLocationDegrees?
     var locInfo = ""
-    let storeSearchManager = StoreSerchManager()
+    var storeSearchManager = StoreSerchManager()
+    var storeInfo : [StoreModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,18 +23,21 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        
+        storeSearchManager.delegate = self
     }
     
-    
-    @IBAction func searchButtonPressed(_ sender: UIButton) {
-        //nilでなければ緯度経度から検索する
-        if Latitude != nil && Longitude != nil{
-            storeSearchManager.fetchSearchStore(lat: Latitude!, lng: Longitude!)
-        }else{
-            self.performSegue(withIdentifier: "goNotFoundStore", sender: self)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToShopList"{
+            let shopListVC = segue.destination as! ShopListViewController
+            shopListVC.shopList = storeInfo
         }
     }
-    
+}
+
+//MARK: - CLLocationManagerDelegate
+
+extension SearchViewController:  CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let loc = locations.last else {return}
@@ -64,12 +67,25 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error: \(error.localizedDescription)")
     }
+}
+
+//MARK: - StoreSerchManagerDelegate
+
+extension SearchViewController: StoreSerchManagerDelegate{
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goNotFoundStore"{
-            
+    @IBAction func searchButtonPressed(_ sender: UIButton) {
+        //nilでなければ緯度経度から検索する
+        if Latitude != nil && Longitude != nil{
+            storeSearchManager.fetchSearchStore(lat: Latitude!, lng: Longitude!)
+        }else{
+            self.performSegue(withIdentifier: "goToNotFoundStore", sender: self)
         }
     }
     
+    func getStoreData(_ storeSerchManager : StoreSerchManager , store : [StoreModel]){
+        storeInfo = store
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "goToShopList", sender: self)
+        }
+    }
 }
-

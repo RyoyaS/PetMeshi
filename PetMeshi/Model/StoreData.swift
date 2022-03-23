@@ -7,14 +7,13 @@
 
 import Foundation
 
-
-
 struct StoreData : Codable{
     let results : Results
 }
 
 struct Results : Codable{
     let shop : [Shop]
+    let results_available : Int
 }
 
 struct Shop :Codable{
