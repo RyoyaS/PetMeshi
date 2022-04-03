@@ -40,7 +40,7 @@ struct StoreSerchManager {
                 
                 if let safeData = data{
                     if let store = parseJson(storeData: safeData){
-                        self.delegate?.getStoreData(self , store: store)
+                        self.delegate?.getStoreData(self, store: store)
                     }
                     
                 }

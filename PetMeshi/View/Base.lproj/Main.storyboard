@@ -29,7 +29,7 @@
                                     <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PYf-W5-O5A"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐶PetMeshi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ej4-of-fav">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ej4-of-fav">
                                 <rect key="frame" x="52" y="418" width="362" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="7c1-kk-WSS"/>
@@ -53,24 +53,25 @@
                     </view>
                     <navigationItem key="navigationItem" id="3KD-l7-hAS"/>
                     <connections>
+                        <outlet property="appNameLabel" destination="ej4-of-fav" id="IAs-Al-Iea"/>
                         <segue destination="ael-nh-BG2" kind="show" identifier="goToNotFoundStore" id="eEp-lr-hmB"/>
-                        <segue destination="b1c-Am-gte" kind="show" identifier="goToShopList" id="TF3-PV-cNT"/>
+                        <segue destination="b1c-Am-gte" kind="show" identifier="goToStoreList" id="TF3-PV-cNT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1855.072463768116" y="112.5"/>
         </scene>
-        <!--Shop List View Controller-->
+        <!--Store List View Controller-->
         <scene sceneID="UTP-ia-Wyb">
             <objects>
-                <tableViewController id="b1c-Am-gte" customClass="ShopListViewController" customModule="PetMeshi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="b1c-Am-gte" customClass="StoreListViewController" customModule="PetMeshi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="l3j-HG-u9s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShopCell" rowHeight="200" id="KtO-8y-bEo">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreCell" rowHeight="200" id="KtO-8y-bEo">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KtO-8y-bEo" id="WQs-Cf-znU">
@@ -109,17 +110,17 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="QuY-0k-5bd"/>
                     <connections>
-                        <segue destination="r9o-hG-SUc" kind="show" identifier="goToShopDetail" id="4Yn-KD-B8e"/>
+                        <segue destination="r9o-hG-SUc" kind="show" identifier="goToStoreDetail" id="4Yn-KD-B8e"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hU9-Mu-Mv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2842.0289855072465" y="-254.46428571428569"/>
         </scene>
-        <!--Shop Detail View Controller-->
+        <!--Store Detail View Controller-->
         <scene sceneID="AAQ-qU-euY">
             <objects>
-                <viewController id="r9o-hG-SUc" customClass="ShopDetailViewController" customModule="PetMeshi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="r9o-hG-SUc" customClass="StoreDetailViewController" customModule="PetMeshi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CZo-Ka-ewV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

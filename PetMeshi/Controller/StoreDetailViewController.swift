@@ -7,14 +7,14 @@
 
 import UIKit
 
-class ShopDetailViewController: UIViewController{
+class StoreDetailViewController: UIViewController{
 
     var name = ""
     @IBOutlet weak var shopNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        shopNameLabel.text = self.name
+        title = name
     }
     
 

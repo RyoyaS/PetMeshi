@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ShopListViewController: UITableViewController {
+class StoreListViewController: UITableViewController {
     
-    var shopList : [StoreModel]?
+    var storeList: [StoreModel]?
+    var selectedStoreName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,33 +18,35 @@ class ShopListViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return self.shopList!.count
+        return storeList!.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.rowHeight = 200
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "ShopCell", for: indexPath)
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: K.storeCellID, for: indexPath)
         let storeNameLable = cell.viewWithTag(1) as! UILabel
-        storeNameLable.text = shopList![indexPath.row].name
+        storeNameLable.text = storeList![indexPath.row].name
         
         let storeAddressLable = cell.viewWithTag(2) as! UILabel
-        storeAddressLable.text = shopList![indexPath.row].address
+        storeAddressLable.text = storeList![indexPath.row].address
         
         let storeAccessLabel = cell.viewWithTag(3) as! UILabel
-        storeAccessLabel.text = shopList![indexPath.row].access
+        storeAccessLabel.text = storeList![indexPath.row].access
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "goToShopDetail", sender: self)
+        selectedStoreName = storeList![indexPath.row].name
+        self.performSegue(withIdentifier: K.storeDetailSegue, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToShopDetail"{
-            let shopDetailVC = segue.destination as! ShopDetailViewController
-            navigationController?.pushViewController(shopDetailVC, animated: true)
+        if segue.identifier == K.storeDetailSegue{
+            let storeDetailVC = segue.destination as! StoreDetailViewController
+            if let safeSelectedStoreName = selectedStoreName{
+                storeDetailVC.name = safeSelectedStoreName
+            }
         }
     }
 

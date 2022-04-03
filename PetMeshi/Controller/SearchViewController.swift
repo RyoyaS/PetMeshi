@@ -10,6 +10,7 @@ import CoreLocation
 
 class SearchViewController: UIViewController {
     
+    @IBOutlet weak var appNameLabel: UILabel!
     let locationManager = CLLocationManager()
     var Latitude: CLLocationDegrees?
     var Longitude: CLLocationDegrees?
@@ -19,6 +20,8 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        appNameLabel.text = K.appName
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -27,12 +30,6 @@ class SearchViewController: UIViewController {
         storeSearchManager.delegate = self
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToShopList"{
-            let shopListVC = segue.destination as! ShopListViewController
-            shopListVC.shopList = storeInfo
-        }
-    }
 }
 
 //MARK: - CLLocationManagerDelegate
@@ -40,28 +37,28 @@ class SearchViewController: UIViewController {
 extension SearchViewController:  CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let loc = locations.last else {return}
-        CLGeocoder().reverseGeocodeLocation(loc, completionHandler: { (placemarks, error) in
-            
-            if let error = error {
-                print("reverseGeocodeLocation Failed: \(error.localizedDescription)")
-                return
-            }
-            
-            if let placemark = placemarks?[0] {
-                //緯度経度
-                self.Latitude = loc.coordinate.latitude
-                self.Longitude = loc.coordinate.longitude
-                
-                //現在地情報
-                self.locInfo = self.locInfo + "Country: \(placemark.country ?? "")\n"
-                self.locInfo = self.locInfo + "State/Province: \(placemark.administrativeArea ?? "")\n"
-                self.locInfo = self.locInfo + "City: \(placemark.locality ?? "")\n"
-                self.locInfo = self.locInfo + "PostalCode: \(placemark.postalCode ?? "")\n"
-                self.locInfo = self.locInfo + "Name: \(placemark.name ?? "")"
-                
-            }
-        })
+        if let loc = locations.last{
+            //緯度経度
+            self.Latitude = loc.coordinate.latitude
+            self.Longitude = loc.coordinate.longitude
+        }
+        //        現在情報を表示する場合のメモ
+        //        CLGeocoder().reverseGeocodeLocation(loc, completionHandler: { (placemarks, error) in
+        //
+        //            if let error = error {
+        //                print("reverseGeocodeLocation Failed: \(error.localizedDescription)")
+        //                return
+        //            }
+        //
+        //            if let placemark = placemarks?[0] {
+        //                //現在地情報
+        //                self.locInfo = self.locInfo + "Country: \(placemark.country ?? "")\n"
+        //                self.locInfo = self.locInfo + "State/Province: \(placemark.administrativeArea ?? "")\n"
+        //                self.locInfo = self.locInfo + "City: \(placemark.locality ?? "")\n"
+        //                self.locInfo = self.locInfo + "PostalCode: \(placemark.postalCode ?? "")\n"
+        //                self.locInfo = self.locInfo + "Name: \(placemark.name ?? "")"
+        //            }
+        //        })
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -75,17 +72,24 @@ extension SearchViewController: StoreSerchManagerDelegate{
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         //nilでなければ緯度経度から検索する
-        if Latitude != nil && Longitude != nil{
-            storeSearchManager.fetchSearchStore(lat: Latitude!, lng: Longitude!)
+        if let safeLat = Latitude, let safeLng = Longitude{
+            storeSearchManager.fetchSearchStore(lat: safeLat, lng: safeLng)
         }else{
-            self.performSegue(withIdentifier: "goToNotFoundStore", sender: self)
+            self.performSegue(withIdentifier: K.notFoundSegue, sender: self)
         }
     }
     
-    func getStoreData(_ storeSerchManager : StoreSerchManager , store : [StoreModel]){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.storeListSegue{
+            let storeListVC = segue.destination as! StoreListViewController
+            storeListVC.storeList = storeInfo
+        }
+    }
+    
+    func getStoreData(_ storeSerchManager: StoreSerchManager , store: [StoreModel]){
         storeInfo = store
         DispatchQueue.main.async {
-            self.performSegue(withIdentifier: "goToShopList", sender: self)
+            self.performSegue(withIdentifier: K.storeListSegue, sender: self)
         }
     }
 }
