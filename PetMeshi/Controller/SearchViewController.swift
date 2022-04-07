@@ -10,17 +10,19 @@ import CoreLocation
 
 class SearchViewController: UIViewController {
     
-    @IBOutlet weak var appNameLabel: UILabel!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var searchButton: UIButton!
     let locationManager = CLLocationManager()
     var Latitude: CLLocationDegrees?
     var Longitude: CLLocationDegrees?
     var locInfo = ""
     var storeSearchManager = StoreSerchManager()
     var storeInfo : [StoreModel] = []
+    var resultNum = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        appNameLabel.text = K.appName
+        searchButton.layer.cornerRadius = 5.0
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -71,6 +73,7 @@ extension SearchViewController:  CLLocationManagerDelegate{
 extension SearchViewController: StoreSerchManagerDelegate{
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
+        
         //nilでなければ緯度経度から検索する
         if let safeLat = Latitude, let safeLng = Longitude{
             storeSearchManager.fetchSearchStore(lat: safeLat, lng: safeLng)
@@ -83,13 +86,19 @@ extension SearchViewController: StoreSerchManagerDelegate{
         if segue.identifier == K.storeListSegue{
             let storeListVC = segue.destination as! StoreListViewController
             storeListVC.storeList = storeInfo
+            storeListVC.resultNum = self.resultNum
         }
     }
     
-    func getStoreData(_ storeSerchManager: StoreSerchManager , store: [StoreModel]){
+    func getStoreData(_ storeSerchManager: StoreSerchManager, store: [StoreModel], resultsNum resultNum: Int){
         storeInfo = store
+        self.resultNum = resultNum
         DispatchQueue.main.async {
-            self.performSegue(withIdentifier: K.storeListSegue, sender: self)
+            if self.resultNum != 0{
+                self.performSegue(withIdentifier: K.storeListSegue, sender: self)
+            }else{
+                self.performSegue(withIdentifier: K.notFoundSegue, sender: self)
+            }
         }
     }
 }

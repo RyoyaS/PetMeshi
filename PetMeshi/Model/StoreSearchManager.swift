@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 
 protocol StoreSerchManagerDelegate{
-    func getStoreData(_ storeSerchManager : StoreSerchManager , store : [StoreModel])
+    func getStoreData(_ storeSerchManager: StoreSerchManager, store: [StoreModel], resultsNum: Int)
 }
 
 struct StoreSerchManager {
@@ -21,7 +21,6 @@ struct StoreSerchManager {
     //検索用URLを作成
     func fetchSearchStore(lat : CLLocationDegrees,lng:CLLocationDegrees) {
         let urlString = "\(storeSerchURL)key=\(apiKey)&lat=\(lat)&lng=\(lng)&rang=4&pet=1&count=30&format=json"
-        print(urlString)
         //リクエストを実施
         performRequest(urlString: urlString)
     }
@@ -39,8 +38,9 @@ struct StoreSerchManager {
                 }
                 
                 if let safeData = data{
-                    if let store = parseJson(storeData: safeData){
-                        self.delegate?.getStoreData(self, store: store)
+                    let result = parseJson(storeData: safeData)
+                    if let safeStore = result.store{
+                        self.delegate?.getStoreData(self, store: safeStore, resultsNum: result.resultsNum)
                     }
                     
                 }
@@ -50,22 +50,23 @@ struct StoreSerchManager {
             
         }
         
-        func parseJson(storeData : Data) -> [StoreModel]? {
+        func parseJson(storeData : Data) -> (store: [StoreModel]?, resultsNum: Int) {
             do{
                 let decoder = JSONDecoder()
                 
                 let decodedData = try decoder.decode(StoreData.self, from: storeData)
                 
                 var storeModel : [StoreModel] = []
+                let resultsNum : Int = decodedData.results.results_available
                 for shop in decodedData.results.shop {
-                    storeModel.append(StoreModel(access: shop.access, address: shop.address, name: shop.name, genre: shop.genre.name, urls: shop.urls.pc))
+                    storeModel.append(StoreModel(access: shop.access, address: shop.address, name: shop.name, genre: shop.genre.name, urls: shop.urls.pc, photo: shop.photo.pc.l, catch: shop.catch))
                 }
-                return storeModel
+                return (storeModel, resultsNum)
                 
                 
             }catch{
                 print(error)
-                return nil
+                return (nil,0)
             }
             
         }

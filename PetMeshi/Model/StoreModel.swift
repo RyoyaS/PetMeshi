@@ -9,9 +9,11 @@ import Foundation
 
 
 struct StoreModel{
-    let access : String
-    let address :String
-    let name : String
-    let genre : String
-    let urls : String
+    let access: String
+    let address: String
+    let name: String
+    let genre: String
+    let urls: String
+    let photo: String
+    let `catch`: String
 }

@@ -400,7 +400,7 @@
 				26312FC027CCF4BD00D9D5F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		26312FC127CCF4BD00D9D5F0 /* Build configuration list for PBXNativeTarget "PetMeshi" */ = {
 			isa = XCConfigurationList;
@@ -409,7 +409,7 @@
 				26312FC327CCF4BD00D9D5F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

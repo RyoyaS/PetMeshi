@@ -16,18 +16,28 @@ struct Results : Codable{
     let results_available : Int
 }
 
-struct Shop :Codable{
-    let access : String
-    let address :String
-    let name : String
-    let genre : Genre
-    let urls : Urls
+struct Shop: Codable{
+    let access: String
+    let address: String
+    let name: String
+    let genre: Genre
+    let urls: Urls
+    let photo: Photo
+    let `catch`: String
 }
 
-struct Genre : Codable{
-    let name : String
+struct Genre: Codable{
+    let name: String
 }
 
-struct Urls : Codable{
-    let pc : String
+struct Urls: Codable{
+    let pc: String
+}
+
+struct Photo: Codable{
+    let pc: Pc
+}
+
+struct Pc: Codable{
+    let l: String
 }
