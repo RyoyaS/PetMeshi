@@ -7,129 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "043A5623-5BE6-4FEC-92F7-7AD375850F93"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PetMeshi/Controller/StoreListViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "StoreListViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "043A5623-5BE6-4FEC-92F7-7AD375850F93 - 275e003c87a9d1e2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PetMeshi.StoreListViewController.storeList.getter : Swift.Optional&lt;Swift.Array&lt;PetMeshi.StoreModel&gt;&gt;"
-                  moduleName = "PetMeshi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suzukiryouya/Google%20%E3%83%88%E3%82%99%E3%83%A9%E3%82%A4%E3%83%95%E3%82%99/Dev_iosApp/PetMeshi/PetMeshi/Controller/StoreListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  uuid = "043A5623-5BE6-4FEC-92F7-7AD375850F93 - a14e2fd26328c896"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PetMeshi.StoreListViewController.storeList.setter : Swift.Optional&lt;Swift.Array&lt;PetMeshi.StoreModel&gt;&gt;"
-                  moduleName = "PetMeshi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suzukiryouya/Google%20%E3%83%88%E3%82%99%E3%83%A9%E3%82%A4%E3%83%95%E3%82%99/Dev_iosApp/PetMeshi/PetMeshi/Controller/StoreListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  uuid = "043A5623-5BE6-4FEC-92F7-7AD375850F93 - 5a4c4a95a5ad9901"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PetMeshi.StoreListViewController.storeList.modify : Swift.Optional&lt;Swift.Array&lt;PetMeshi.StoreModel&gt;&gt;"
-                  moduleName = "PetMeshi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suzukiryouya/Google%20%E3%83%88%E3%82%99%E3%83%A9%E3%82%A4%E3%83%95%E3%82%99/Dev_iosApp/PetMeshi/PetMeshi/Controller/StoreListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "043A5623-5BE6-4FEC-92F7-7AD375850F93 - a92ff2b3793462e5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PetMeshi.StoreListViewController.storeList.modify : Swift.Optional&lt;Swift.Array&lt;PetMeshi.StoreModel&gt;&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "PetMeshi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suzukiryouya/Google%20%E3%83%88%E3%82%99%E3%83%A9%E3%82%A4%E3%83%95%E3%82%99/Dev_iosApp/PetMeshi/PetMeshi/Controller/StoreListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "043A5623-5BE6-4FEC-92F7-7AD375850F93 - 3940209ee707b6b5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PetMeshi.StoreListViewController.init(style: __C.UITableViewStyle) -&gt; PetMeshi.StoreListViewController"
-                  moduleName = "PetMeshi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suzukiryouya/Google%20%E3%83%88%E3%82%99%E3%83%A9%E3%82%A4%E3%83%95%E3%82%99/Dev_iosApp/PetMeshi/PetMeshi/Controller/StoreListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  uuid = "043A5623-5BE6-4FEC-92F7-7AD375850F93 - 736f2e1889e1b46b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PetMeshi.StoreListViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; PetMeshi.StoreListViewController"
-                  moduleName = "PetMeshi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suzukiryouya/Google%20%E3%83%88%E3%82%99%E3%83%A9%E3%82%A4%E3%83%95%E3%82%99/Dev_iosApp/PetMeshi/PetMeshi/Controller/StoreListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "92">
-               </Location>
-               <Location
-                  uuid = "043A5623-5BE6-4FEC-92F7-7AD375850F93 - 2277ecdea4dc8e14"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PetMeshi.StoreListViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;PetMeshi.StoreListViewController&gt;"
-                  moduleName = "PetMeshi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suzukiryouya/Google%20%E3%83%88%E3%82%99%E3%83%A9%E3%82%A4%E3%83%95%E3%82%99/Dev_iosApp/PetMeshi/PetMeshi/Controller/StoreListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "8974B902-5F21-43A6-8926-649B88C4B540"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -137,8 +14,8 @@
             filePath = "PetMeshi/Controller/StoreListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -153,8 +30,8 @@
             filePath = "PetMeshi/Controller/StoreListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2609203C27F9E19900AFBAA3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2609203B27F9E19900AFBAA3 /* Constants.swift */; };
+		260920422800946B00AFBAA3 /* CustomUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260920412800946B00AFBAA3 /* CustomUINavigationController.swift */; };
+		26092044280299F000AFBAA3 /* ShowURLPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26092043280299F000AFBAA3 /* ShowURLPhoto.swift */; };
+		2623173128095BA40073C7F1 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2623173028095BA40073C7F1 /* Alert.swift */; };
 		26312FB127CCF4BB00D9D5F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26312FB027CCF4BB00D9D5F0 /* AppDelegate.swift */; };
 		26312FB327CCF4BB00D9D5F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26312FB227CCF4BB00D9D5F0 /* SceneDelegate.swift */; };
 		26312FB527CCF4BB00D9D5F0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26312FB427CCF4BB00D9D5F0 /* SearchViewController.swift */; };
@@ -15,15 +18,21 @@
 		26312FBA27CCF4BD00D9D5F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26312FB927CCF4BD00D9D5F0 /* Assets.xcassets */; };
 		26312FBD27CCF4BD00D9D5F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26312FBB27CCF4BD00D9D5F0 /* LaunchScreen.storyboard */; };
 		26312FC727CCFF0800D9D5F0 /* StoreSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26312FC627CCFF0800D9D5F0 /* StoreSearchManager.swift */; };
+		263AA0F22804680F0052D7D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 263AA0F12804680F0052D7D8 /* GoogleService-Info.plist */; };
+		263AA0F42805B56E0052D7D8 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263AA0F32805B56E0052D7D8 /* AdManager.swift */; };
 		26B2D21927CD1507000AE8D5 /* NotFoundStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D21827CD1507000AE8D5 /* NotFoundStoreViewController.swift */; };
 		26B2D22327CE6827000AE8D5 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D22227CE6827000AE8D5 /* StoreData.swift */; };
 		26B2D22527CEE8F4000AE8D5 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D22427CEE8F4000AE8D5 /* StoreModel.swift */; };
 		26B2D22727CF9C90000AE8D5 /* StoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D22627CF9C90000AE8D5 /* StoreListViewController.swift */; };
 		26B2D22927D4DF63000AE8D5 /* StoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D22827D4DF63000AE8D5 /* StoreDetailViewController.swift */; };
+		84964DEF152F6AB9C556348C /* Pods_PetMeshi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8148CEE09E6B6EE1EE6C95 /* Pods_PetMeshi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2609203B27F9E19900AFBAA3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		260920412800946B00AFBAA3 /* CustomUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUINavigationController.swift; sourceTree = "<group>"; };
+		26092043280299F000AFBAA3 /* ShowURLPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowURLPhoto.swift; sourceTree = "<group>"; };
+		2623173028095BA40073C7F1 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		26312FAD27CCF4BB00D9D5F0 /* PetMeshi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetMeshi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26312FB027CCF4BB00D9D5F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26312FB227CCF4BB00D9D5F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,11 +42,16 @@
 		26312FBC27CCF4BD00D9D5F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26312FBE27CCF4BD00D9D5F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26312FC627CCFF0800D9D5F0 /* StoreSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchManager.swift; sourceTree = "<group>"; };
+		263AA0F12804680F0052D7D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		263AA0F32805B56E0052D7D8 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
 		26B2D21827CD1507000AE8D5 /* NotFoundStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundStoreViewController.swift; sourceTree = "<group>"; };
 		26B2D22227CE6827000AE8D5 /* StoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
 		26B2D22427CEE8F4000AE8D5 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		26B2D22627CF9C90000AE8D5 /* StoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewController.swift; sourceTree = "<group>"; };
 		26B2D22827D4DF63000AE8D5 /* StoreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailViewController.swift; sourceTree = "<group>"; };
+		4F8148CEE09E6B6EE1EE6C95 /* Pods_PetMeshi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetMeshi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79B5022DFC762A4E9D257F8C /* Pods-PetMeshi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetMeshi.release.xcconfig"; path = "Target Support Files/Pods-PetMeshi/Pods-PetMeshi.release.xcconfig"; sourceTree = "<group>"; };
+		DDD6E6B3A5DB74ECA0ABE704 /* Pods-PetMeshi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetMeshi.debug.xcconfig"; path = "Target Support Files/Pods-PetMeshi/Pods-PetMeshi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84964DEF152F6AB9C556348C /* Pods_PetMeshi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +71,8 @@
 			children = (
 				26312FAF27CCF4BB00D9D5F0 /* PetMeshi */,
 				26312FAE27CCF4BB00D9D5F0 /* Products */,
+				BB586E1521616E0D085B0FB6 /* Pods */,
+				AB1694937C5A98342E6C5D95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +95,7 @@
 				26312FB927CCF4BD00D9D5F0 /* Assets.xcassets */,
 				26312FBB27CCF4BD00D9D5F0 /* LaunchScreen.storyboard */,
 				26312FBE27CCF4BD00D9D5F0 /* Info.plist */,
+				263AA0F12804680F0052D7D8 /* GoogleService-Info.plist */,
 				2609203B27F9E19900AFBAA3 /* Constants.swift */,
 			);
 			path = PetMeshi;
@@ -98,6 +116,7 @@
 				26B2D21827CD1507000AE8D5 /* NotFoundStoreViewController.swift */,
 				26B2D22627CF9C90000AE8D5 /* StoreListViewController.swift */,
 				26B2D22827D4DF63000AE8D5 /* StoreDetailViewController.swift */,
+				260920412800946B00AFBAA3 /* CustomUINavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -108,8 +127,28 @@
 				26312FC627CCFF0800D9D5F0 /* StoreSearchManager.swift */,
 				26B2D22227CE6827000AE8D5 /* StoreData.swift */,
 				26B2D22427CEE8F4000AE8D5 /* StoreModel.swift */,
+				26092043280299F000AFBAA3 /* ShowURLPhoto.swift */,
+				263AA0F32805B56E0052D7D8 /* AdManager.swift */,
+				2623173028095BA40073C7F1 /* Alert.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AB1694937C5A98342E6C5D95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F8148CEE09E6B6EE1EE6C95 /* Pods_PetMeshi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB586E1521616E0D085B0FB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDD6E6B3A5DB74ECA0ABE704 /* Pods-PetMeshi.debug.xcconfig */,
+				79B5022DFC762A4E9D257F8C /* Pods-PetMeshi.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26312FC127CCF4BD00D9D5F0 /* Build configuration list for PBXNativeTarget "PetMeshi" */;
 			buildPhases = (
+				5C2C6884278E1AF3AF287D66 /* [CP] Check Pods Manifest.lock */,
 				26312FA927CCF4BB00D9D5F0 /* Sources */,
 				26312FAA27CCF4BB00D9D5F0 /* Frameworks */,
 				26312FAB27CCF4BB00D9D5F0 /* Resources */,
+				A3F708E0C61895B4BF815729 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,12 +212,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				26312FBD27CCF4BD00D9D5F0 /* LaunchScreen.storyboard in Resources */,
+				263AA0F22804680F0052D7D8 /* GoogleService-Info.plist in Resources */,
 				26312FBA27CCF4BD00D9D5F0 /* Assets.xcassets in Resources */,
 				26312FB827CCF4BB00D9D5F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C2C6884278E1AF3AF287D66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PetMeshi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3F708E0C61895B4BF815729 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetMeshi/Pods-PetMeshi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetMeshi/Pods-PetMeshi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetMeshi/Pods-PetMeshi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		26312FA927CCF4BB00D9D5F0 /* Sources */ = {
@@ -186,13 +270,17 @@
 				26312FB527CCF4BB00D9D5F0 /* SearchViewController.swift in Sources */,
 				26312FC727CCFF0800D9D5F0 /* StoreSearchManager.swift in Sources */,
 				26B2D22927D4DF63000AE8D5 /* StoreDetailViewController.swift in Sources */,
+				263AA0F42805B56E0052D7D8 /* AdManager.swift in Sources */,
 				26B2D21927CD1507000AE8D5 /* NotFoundStoreViewController.swift in Sources */,
 				26B2D22727CF9C90000AE8D5 /* StoreListViewController.swift in Sources */,
+				2623173128095BA40073C7F1 /* Alert.swift in Sources */,
 				2609203C27F9E19900AFBAA3 /* Constants.swift in Sources */,
 				26B2D22327CE6827000AE8D5 /* StoreData.swift in Sources */,
 				26B2D22527CEE8F4000AE8D5 /* StoreModel.swift in Sources */,
 				26312FB127CCF4BB00D9D5F0 /* AppDelegate.swift in Sources */,
+				260920422800946B00AFBAA3 /* CustomUINavigationController.swift in Sources */,
 				26312FB327CCF4BB00D9D5F0 /* SceneDelegate.swift in Sources */,
+				26092044280299F000AFBAA3 /* ShowURLPhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BANNER_ID = "ca-app-pub-3940256099942544/2934735716";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -255,6 +344,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				GADApplicationIdentifier = "a-app-pub-3940256099942544~1458002511";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -269,6 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INTERSTITIAL_ID = "ca-app-pub-3940256099942544/4411468910";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -283,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BANNER_ID = "ca-app-pub-4346171895214377/9921909248";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -316,6 +408,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GADApplicationIdentifier = "ca-app-pub-4346171895214377~9083115078";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -324,6 +417,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INTERSTITIAL_ID = "ca-app-pub-4346171895214377/9921909248";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -336,17 +430,22 @@
 		};
 		26312FC227CCF4BD00D9D5F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDD6E6B3A5DB74ECA0ABE704 /* Pods-PetMeshi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7GB88KSYRV;
+				DEVELOPMENT_TEAM = X83B7JFD29;
+				GADApplicationIdentifier = "ca-app-pub-3940256099942544~1458002511";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PetMeshi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "わんランチ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "近くのお店を探すために位置情報を使用します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,23 +457,29 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		26312FC327CCF4BD00D9D5F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79B5022DFC762A4E9D257F8C /* Pods-PetMeshi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BANNER_ID = "ca-app-pub-4346171895214377/9921909248";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7GB88KSYRV;
+				DEVELOPMENT_TEAM = X83B7JFD29;
+				GADApplicationIdentifier = "ca-app-pub-4346171895214377~9083115078";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PetMeshi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "わんランチ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "近くのお店を探すために位置情報を使用します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -386,7 +491,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

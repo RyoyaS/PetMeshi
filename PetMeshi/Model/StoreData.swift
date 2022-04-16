@@ -24,6 +24,8 @@ struct Shop: Codable{
     let urls: Urls
     let photo: Photo
     let `catch`: String
+    let lat: Double
+    let lng: Double
 }
 
 struct Genre: Codable{

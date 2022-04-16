@@ -16,4 +16,6 @@ struct StoreModel{
     let urls: String
     let photo: String
     let `catch`: String
+    let lat: Double
+    let lng: Double
 }

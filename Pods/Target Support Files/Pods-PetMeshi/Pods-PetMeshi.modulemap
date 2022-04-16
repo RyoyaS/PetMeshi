@@ -1,0 +1,6 @@
+framework module Pods_PetMeshi {
+  umbrella header "Pods-PetMeshi-umbrella.h"
+
+  export *
+  module * { export * }
+}

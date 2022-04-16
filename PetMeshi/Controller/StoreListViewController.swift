@@ -6,16 +6,21 @@
 //
 
 import UIKit
+import CoreLocation
+import GoogleMobileAds
 
 class StoreListViewController: UITableViewController {
     
     var storeList: [StoreModel]?
     var selectedStore: StoreModel?
     var resultNum : Int?
+    var userLocation: CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "検索結果\(resultNum!)件"
+        
+        UITableView.appearance().backgroundColor = UIColor.white
     }
     
     //リストのセル数を決める
@@ -25,7 +30,7 @@ class StoreListViewController: UITableViewController {
     
     //セルを作成する
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.rowHeight = 150
+        tableView.rowHeight = 180
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: K.storeCellID, for: indexPath)
         let storeNameLable = cell.viewWithTag(1) as! UILabel
         storeNameLable.text = storeList![indexPath.row].name
@@ -35,6 +40,11 @@ class StoreListViewController: UITableViewController {
         
         let storeAccessLabel = cell.viewWithTag(3) as! UILabel
         storeAccessLabel.text = storeList![indexPath.row].access
+        
+        let distanceLabel = cell.viewWithTag(4) as! UILabel
+        let storeLocation = CLLocation(latitude: storeList![indexPath.row].lat, longitude: storeList![indexPath.row].lng)
+        let distance = storeLocation.distance(from: userLocation!)
+        distanceLabel.text = "店まで\(String(format: "%.0f", distance))m"
         
         return cell
     }
@@ -49,7 +59,7 @@ class StoreListViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.storeDetailSegue{
             let storeDetailVC = segue.destination as! StoreDetailViewController
-                storeDetailVC.store = selectedStore
+            storeDetailVC.store = selectedStore
         }
     }
 

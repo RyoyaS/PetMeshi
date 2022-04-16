@@ -50,6 +50,14 @@ struct StoreSerchManager {
             
         }
         
+        func maxResultNum(results_available: Int) -> Int{
+            if results_available >= 30{
+                return 30
+            }else{
+                return results_available
+            }
+        }
+        
         func parseJson(storeData : Data) -> (store: [StoreModel]?, resultsNum: Int) {
             do{
                 let decoder = JSONDecoder()
@@ -57,9 +65,9 @@ struct StoreSerchManager {
                 let decodedData = try decoder.decode(StoreData.self, from: storeData)
                 
                 var storeModel : [StoreModel] = []
-                let resultsNum : Int = decodedData.results.results_available
+                let resultsNum : Int = maxResultNum(results_available: decodedData.results.results_available) 
                 for shop in decodedData.results.shop {
-                    storeModel.append(StoreModel(access: shop.access, address: shop.address, name: shop.name, genre: shop.genre.name, urls: shop.urls.pc, photo: shop.photo.pc.l, catch: shop.catch))
+                    storeModel.append(StoreModel(access: shop.access, address: shop.address, name: shop.name, genre: shop.genre.name, urls: shop.urls.pc, photo: shop.photo.pc.l, catch: shop.catch, lat: shop.lat, lng: shop.lng))
                 }
                 return (storeModel, resultsNum)
                 

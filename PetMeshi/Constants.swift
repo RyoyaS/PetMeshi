@@ -13,4 +13,5 @@ struct K {
     static let storeDetailSegue = "goToStoreDetail"
     static let storeCellID = "StoreCell"
     static let noPhoto = "noPhoto"
+    static let banner = "banner"
 }
