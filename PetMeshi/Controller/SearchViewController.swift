@@ -45,7 +45,7 @@ class SearchViewController: UIViewController {
     }
 
     @IBAction func creditButtonPressed(_ sender: UIButton) {
-        let url = URL(string: "https://webservice.recruit.co.jp/doc/hotpepper/guideline.html")
+        let url = URL(string: "https://webservice.recruit.co.jp/")
         if let safeURL = url{
             if UIApplication.shared.canOpenURL(safeURL){
                 UIApplication.shared.open(safeURL)
