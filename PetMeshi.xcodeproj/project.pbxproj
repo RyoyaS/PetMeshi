@@ -20,6 +20,7 @@
 		26312FC727CCFF0800D9D5F0 /* StoreSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26312FC627CCFF0800D9D5F0 /* StoreSearchManager.swift */; };
 		263AA0F22804680F0052D7D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 263AA0F12804680F0052D7D8 /* GoogleService-Info.plist */; };
 		263AA0F42805B56E0052D7D8 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263AA0F32805B56E0052D7D8 /* AdManager.swift */; };
+		265DFCFE280D98460097366C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 265DFCFD280D98460097366C /* README.md */; };
 		26B2D21927CD1507000AE8D5 /* NotFoundStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D21827CD1507000AE8D5 /* NotFoundStoreViewController.swift */; };
 		26B2D22327CE6827000AE8D5 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D22227CE6827000AE8D5 /* StoreData.swift */; };
 		26B2D22527CEE8F4000AE8D5 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D22427CEE8F4000AE8D5 /* StoreModel.swift */; };
@@ -44,6 +45,7 @@
 		26312FC627CCFF0800D9D5F0 /* StoreSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchManager.swift; sourceTree = "<group>"; };
 		263AA0F12804680F0052D7D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		263AA0F32805B56E0052D7D8 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
+		265DFCFD280D98460097366C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		26B2D21827CD1507000AE8D5 /* NotFoundStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundStoreViewController.swift; sourceTree = "<group>"; };
 		26B2D22227CE6827000AE8D5 /* StoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
 		26B2D22427CEE8F4000AE8D5 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		26312FA427CCF4BB00D9D5F0 = {
 			isa = PBXGroup;
 			children = (
+				265DFCFD280D98460097366C /* README.md */,
 				26312FAF27CCF4BB00D9D5F0 /* PetMeshi */,
 				26312FAE27CCF4BB00D9D5F0 /* Products */,
 				BB586E1521616E0D085B0FB6 /* Pods */,
@@ -213,6 +216,7 @@
 			files = (
 				26312FBD27CCF4BD00D9D5F0 /* LaunchScreen.storyboard in Resources */,
 				263AA0F22804680F0052D7D8 /* GoogleService-Info.plist in Resources */,
+				265DFCFE280D98460097366C /* README.md in Resources */,
 				26312FBA27CCF4BD00D9D5F0 /* Assets.xcassets in Resources */,
 				26312FB827CCF4BB00D9D5F0 /* Main.storyboard in Resources */,
 			);
